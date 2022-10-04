@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 335892311093943187}
   - component: {fileID: 6172832059772365186}
   - component: {fileID: -6195034958783084023}
+  - component: {fileID: -2928627470757660202}
   - component: {fileID: -2892025837742856889}
   m_Layer: 0
   m_Name: UFO_Scout
@@ -127,8 +128,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335892311093943184}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -5, y: 0, z: 0}
-  m_LocalScale: {x: 8, y: 2, z: 8}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 1, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 335892309632649409}
@@ -226,6 +227,20 @@ MonoBehaviour:
   topBound: 40
   lowerBound: -10
   sideBounds: 30
+--- !u!114 &-2928627470757660202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335892311093943184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49ef9271d386843b21f85d5ec58426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  scoreToGive: 200
 --- !u!54 &-2892025837742856889
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -240,5 +255,5 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 0

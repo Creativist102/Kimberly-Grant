@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7816607763325332737}
   - component: {fileID: 1763756780666526979}
   - component: {fileID: -8272016436821562962}
+  - component: {fileID: -2255450893808827692}
   - component: {fileID: 7404005148166793267}
   m_Layer: 0
   m_Name: UFO_Mothership
@@ -30,8 +31,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7816607763325332736}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -42, y: 0, z: 0}
-  m_LocalScale: {x: 24, y: 5, z: 24}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 12, y: 2.5, z: 12}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7816607764185730072}
@@ -131,6 +132,20 @@ MonoBehaviour:
   topBound: 40
   lowerBound: -10
   sideBounds: 30
+--- !u!114 &-2255450893808827692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7816607763325332736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac49ef9271d386843b21f85d5ec58426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  scoreToGive: 50
 --- !u!54 &7404005148166793267
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -145,7 +160,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &7816607763436020741
 GameObject:
