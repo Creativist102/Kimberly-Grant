@@ -11,12 +11,12 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(sceneToLoad);
-         Debug.Log("New Scene Loaded!");
+        Debug.Log("New Scene Loaded!");
     }
 
     public void QuitGame()
     {
         Application.Quit();
-         Debug.Log("You have quit the game. Goodbye!");
+        Debug.Log("You have quit the game. Goodbye!");
     }
 }
