@@ -8,20 +8,21 @@ public class PlayerController2D : MonoBehaviour
     public float jumpForce;
     private float moveInput;
 
-    private Rigidbody2D rb;
+    private RigidBody2D rb;
     private bool isFacingRight = true;
 
+    /*
     private bool isGrounded = true;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
 
     public bool doubleJump;
-    
+    */
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<RigidBody2D>();
     }
 
     void FixedUpdate()
@@ -40,7 +41,7 @@ public class PlayerController2D : MonoBehaviour
             FlipPlayer();
         }
     }
-    
+    /*
     void Update()
     {
         if(isGrounded)
@@ -58,6 +59,7 @@ public class PlayerController2D : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
         }
     }
+    */
 
     void FlipPlayer()
     {
