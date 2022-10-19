@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveForward : MonoBehaviour
 {
-    public float speed;
+   public float speed;
 
     // Update is called once per frame
     void Update()
@@ -12,3 +12,5 @@ public class MoveForward : MonoBehaviour
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 }
+
+//Used on UFOs, LAZERBOLTs

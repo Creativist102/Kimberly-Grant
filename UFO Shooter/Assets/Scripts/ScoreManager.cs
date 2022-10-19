@@ -14,7 +14,6 @@ public class ScoreManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     public void IncreaseScore(int amount)
     {
         score += amount;

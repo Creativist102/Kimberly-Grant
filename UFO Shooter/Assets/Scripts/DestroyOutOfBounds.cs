@@ -9,12 +9,13 @@ public class DestroyOutOfBounds : MonoBehaviour
     public float sideBounds = 30.0f;
 
     private ScoreManager scoreManager;
-    private DetectCollision detectCollision;
+    private DetectCollisions detectCollisions;
 
+    // Start is called before the first frame update
     void Start()
     {
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
-        detectCollision = GetComponent<DetectCollision>();
+        detectCollisions = GetComponent<DetectCollisions>();
     }
 
     // Update is called once per frame
@@ -26,7 +27,7 @@ public class DestroyOutOfBounds : MonoBehaviour
         }
         else if(transform.position.z < lowerBound)
         {
-            scoreManager.DecreaseScore(detectCollision.scoreToGive);
+            scoreManager.DecreaseScore(detectCollisions.scoreToGive);
             Destroy(gameObject);
         }
 
@@ -40,3 +41,5 @@ public class DestroyOutOfBounds : MonoBehaviour
         }
     }
 }
+
+//Used on UFOs, LAZERBOLTs

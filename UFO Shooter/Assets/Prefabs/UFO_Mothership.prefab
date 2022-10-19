@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 7816607763325332739}
   - component: {fileID: 7816607763325332738}
   - component: {fileID: 7816607763325332737}
-  - component: {fileID: 1763756780666526979}
-  - component: {fileID: -8272016436821562962}
-  - component: {fileID: -2255450893808827692}
   - component: {fileID: 7404005148166793267}
+  - component: {fileID: 4540626680253852556}
+  - component: {fileID: 4260084297629532873}
   m_Layer: 0
   m_Name: UFO_Mothership
   m_TagString: Untagged
@@ -104,48 +103,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1763756780666526979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7816607763325332736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dab555c6b6154b4eba23cb3b8a529fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.7
---- !u!114 &-8272016436821562962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7816607763325332736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f8f6a8c4133c7343849eb190dba4a0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topBound: 40
-  lowerBound: -10
-  sideBounds: 30
---- !u!114 &-2255450893808827692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7816607763325332736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac49ef9271d386843b21f85d5ec58426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreManager: {fileID: 0}
-  scoreToGive: 50
 --- !u!54 &7404005148166793267
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -162,6 +119,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &4540626680253852556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7816607763325332736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54dff50d2969f6141a2c0bb85da3ae03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+--- !u!114 &4260084297629532873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7816607763325332736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f19589d26e3cab49929b19f38fdee2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  scoreToGive: 0
+  explosionParticle: {fileID: 4041009298163821538, guid: 82732114a74ad3842b0d76eb9aa8758c, type: 3}
 --- !u!1 &7816607763436020741
 GameObject:
   m_ObjectHideFlags: 0

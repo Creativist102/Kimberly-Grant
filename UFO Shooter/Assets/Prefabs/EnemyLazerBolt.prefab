@@ -106,9 +106,9 @@ GameObject:
   - component: {fileID: 2825675776786705454}
   - component: {fileID: 6084304755249640500}
   - component: {fileID: 6082940906920535894}
-  - component: {fileID: 2033880938255617063}
-  - component: {fileID: 5048470283919777028}
   - component: {fileID: 5454125243630219586}
+  - component: {fileID: 5404513177624085978}
+  - component: {fileID: 9061676260290133142}
   m_Layer: 0
   m_Name: EnemyLazerBolt
   m_TagString: Untagged
@@ -123,7 +123,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6444942582362369740}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 2.747198, y: 0.0000009536743, z: 6.2869616}
   m_LocalScale: {x: 0.2, y: 0.1, z: 2}
   m_ConstrainProportionsScale: 0
@@ -131,7 +131,7 @@ Transform:
   - {fileID: 6404151711513073991}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &2825675776786705454
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -196,34 +196,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2033880938255617063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6444942582362369740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dab555c6b6154b4eba23cb3b8a529fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
---- !u!114 &5048470283919777028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6444942582362369740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f8f6a8c4133c7343849eb190dba4a0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topBound: 40
-  lowerBound: -10
-  sideBounds: 30
 --- !u!54 &5454125243630219586
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -240,3 +212,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5404513177624085978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6444942582362369740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54dff50d2969f6141a2c0bb85da3ae03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
+--- !u!114 &9061676260290133142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6444942582362369740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f19589d26e3cab49929b19f38fdee2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  scoreToGive: 0
+  explosionParticle: {fileID: 0}
