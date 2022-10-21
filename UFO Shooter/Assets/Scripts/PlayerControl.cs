@@ -44,4 +44,4 @@ public class PlayerControl : MonoBehaviour
     }
 }
 
-//Used on player
+//Used on PLAYER

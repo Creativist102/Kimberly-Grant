@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 777460340}
 --- !u!1 &419439370
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +213,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4601aa7c6a63c6b4abf660b49205a576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - {fileID: 7575314333562154755, guid: 4aac8ce69a750c049bb0c68054e45ff7, type: 3}
+  - {fileID: 7816607763325332736, guid: 473459b5dd037e54b8150d723f5513c2, type: 3}
+  - {fileID: 335892311093943184, guid: 75b20f13c5959b141aeb4771cbaffaf1, type: 3}
+  spawnRangeX: 16.8
+  spawnPosZ: 30
 --- !u!1 &670117400
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670117400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -880,10 +886,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hInput: 0
-  speed: 0
-  LazerBolt: {fileID: 0}
-  blaster: {fileID: 0}
-  lazerBlast: {fileID: 0}
+  speed: 20
+  LazerBolt: {fileID: 1402778426373202773, guid: b463f882101fd0444b369df091c3bbdd, type: 3}
+  blaster: {fileID: 670117401}
+  lazerBlast: {fileID: 8300000, guid: 8d5fd55fedf53854e986680415ab3a8b, type: 3}
 --- !u!1 &1665182653
 GameObject:
   m_ObjectHideFlags: 0

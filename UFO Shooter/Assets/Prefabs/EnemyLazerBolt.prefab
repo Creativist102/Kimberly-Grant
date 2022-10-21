@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 5454125243630219586}
   - component: {fileID: 5404513177624085978}
   - component: {fileID: 9061676260290133142}
+  - component: {fileID: 3085562299300121773}
   m_Layer: 0
   m_Name: EnemyLazerBolt
   m_TagString: Untagged
@@ -240,3 +241,18 @@ MonoBehaviour:
   scoreManager: {fileID: 0}
   scoreToGive: 0
   explosionParticle: {fileID: 0}
+--- !u!114 &3085562299300121773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6444942582362369740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc232acc90db834449418c41c471e29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBound: 30
+  lowerBound: -5
+  sideBounds: 30

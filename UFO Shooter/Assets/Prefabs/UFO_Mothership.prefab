@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7404005148166793267}
   - component: {fileID: 4540626680253852556}
   - component: {fileID: 4260084297629532873}
+  - component: {fileID: -4327456627018369163}
   m_Layer: 0
   m_Name: UFO_Mothership
   m_TagString: Untagged
@@ -131,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54dff50d2969f6141a2c0bb85da3ae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 2
 --- !u!114 &4260084297629532873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,8 +146,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 0}
-  scoreToGive: 0
+  scoreToGive: 50
   explosionParticle: {fileID: 4041009298163821538, guid: 82732114a74ad3842b0d76eb9aa8758c, type: 3}
+--- !u!114 &-4327456627018369163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7816607763325332736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc232acc90db834449418c41c471e29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBound: 30
+  lowerBound: -5
+  sideBounds: 30
 --- !u!1 &7816607763436020741
 GameObject:
   m_ObjectHideFlags: 0

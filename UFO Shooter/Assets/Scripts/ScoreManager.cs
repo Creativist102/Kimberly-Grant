@@ -31,3 +31,5 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 }
+
+//Used on SCOREMANAGER

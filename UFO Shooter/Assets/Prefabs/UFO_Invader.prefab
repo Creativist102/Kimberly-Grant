@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 2552372714239261229}
   - component: {fileID: -4298101931031474247}
   - component: {fileID: 5306299346291516815}
+  - component: {fileID: -3231771109762029198}
   m_Layer: 0
   m_Name: UFO_Invader
   m_TagString: Untagged
@@ -258,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54dff50d2969f6141a2c0bb85da3ae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 10
 --- !u!114 &5306299346291516815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,5 +273,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 0}
-  scoreToGive: 0
+  scoreToGive: 200
   explosionParticle: {fileID: 4041009298163821538, guid: 82732114a74ad3842b0d76eb9aa8758c, type: 3}
+--- !u!114 &-3231771109762029198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7575314333562154755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc232acc90db834449418c41c471e29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBound: 30
+  lowerBound: -5
+  sideBounds: 30
