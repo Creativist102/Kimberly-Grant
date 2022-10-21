@@ -31,7 +31,7 @@ public class PlayerController2D : MonoBehaviour
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
-        if(isFacingRight && moveInput > 0)
+        if(!isFacingRight && moveInput > 0)
         {
             FlipPlayer();
         }
