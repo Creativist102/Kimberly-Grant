@@ -29,6 +29,13 @@ public class ScoreManager : MonoBehaviour
     void UpdateScoreText()
     {
         scoreText.text = "Score: " + score;
+        /*
+        if(score < 0)
+        {
+            SceneManager.LoadScene();
+            Debug.Log("You died. Try again?")
+        }
+        */
     }
 }
 

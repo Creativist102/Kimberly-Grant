@@ -41,6 +41,12 @@ public class PlayerControl : MonoBehaviour
             blasterAudio.PlayOneShot(lazerBlast, 1.0f);
             Instantiate(LazerBolt, blaster.transform.position, LazerBolt.transform.rotation);
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+            Debug.Log("You have quit the game. Goodbye!");
+        }
     }
 }
 
