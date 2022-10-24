@@ -6,3 +6,5 @@ public class Object : MonoBehaviour
 {
     public string ID;
 }
+
+//Used on COLLECTABLEs

@@ -67,3 +67,5 @@ public class PlayerController2D : MonoBehaviour
         transform.localScale = scaler;
     }
 }
+
+//Used on PLAYER

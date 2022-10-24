@@ -20,3 +20,5 @@ public class CollectObject : MonoBehaviour
         }
     }
 }
+
+//Used on COLLECTABLEs

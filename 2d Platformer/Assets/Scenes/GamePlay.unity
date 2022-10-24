@@ -186,7 +186,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.3773585, g: 0.24435417, b: 0.037023842, a: 1}
   m_FlipX: 0
@@ -1014,11 +1014,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 795876075}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6112acbc6ce66041b6bf2535a608343, type: 3}
+  m_Script: {fileID: 11500000, guid: b61a1a724de3e5f45b35407f73a8d5f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
-  scoreToGive: 0
+  objectPrefab: {fileID: 7118737825280999656, guid: 63c51dceca471aa45a48e0256aea48dd, type: 3}
 --- !u!1 &1055313773
 GameObject:
   m_ObjectHideFlags: 0
