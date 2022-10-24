@@ -48,12 +48,12 @@ public class PlayerController2D : MonoBehaviour
             doubleJump = true;
         }
 
-        if(Input.GetKeyDown(KeyCode.Space) && doubleJump)
+        if(Input.GetKeyDown(KeyCode.UpArrow) && doubleJump)
         {
             rb.velocity = Vector2.up * jumpForce;
             doubleJump = false;
         }
-        else if(Input.GetKeyDown(KeyCode.Space) && !doubleJump && isGrounded)
+        else if(Input.GetKeyDown(KeyCode.UpArrow) && !doubleJump && isGrounded)
         {
             rb.velocity = Vector2.up * jumpForce;
         }
