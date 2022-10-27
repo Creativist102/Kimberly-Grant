@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Seed
   - Equipment
+  - Enemy
   layers:
   - Default
   - TransparentFX

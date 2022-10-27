@@ -17,7 +17,6 @@ public class PlayerController2D : MonoBehaviour
     public LayerMask whatIsGround;
 
     public bool doubleJump;
-    
 
     void Start()
     {
