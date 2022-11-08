@@ -16,7 +16,7 @@ public class DestroyBounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.position.x > sideBounds)
+        /*if(player.position.x > sideBounds)
         {
             Destroy(gameObject);
         }
@@ -24,6 +24,6 @@ public class DestroyBounds : MonoBehaviour
         if(player.position.x < -sideBounds)
         {
             Destroy(gameObject);
-        }
+        }*/
     }
 }

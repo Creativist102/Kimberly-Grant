@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7084724075920286773}
   - component: {fileID: 7084724075920286770}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,8 @@ GameObject:
   - component: {fileID: 7084724075929813001}
   - component: {fileID: 7084724075929813004}
   - component: {fileID: 7084724075929813000}
-  m_Layer: 0
+  - component: {fileID: 221849596001210310}
+  m_Layer: 3
   m_Name: GhostEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -203,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b862d59081303140b6c7b50f8e8649a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 5
   rayDistance: 0.5
   groundDetection: {fileID: 7084724076671466129}
 --- !u!114 &7084724075929813000
@@ -219,6 +220,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!114 &221849596001210310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7084724075929813007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41658bef3bbc631419dc2af59c003ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  speed: 5
 --- !u!1 &7084724076172178294
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7084724076172178295}
   - component: {fileID: 7084724076172178292}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7084724076671466129}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GroundDetect
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -344,7 +359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7084724077003890436}
   - component: {fileID: 7084724077003890437}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eye (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

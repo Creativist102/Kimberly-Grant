@@ -21,7 +21,7 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         //if(gameObject.position.x >= bounds) Destroy(gameObject);
-        //if(gameObject.position.x >= -bounds) Destroy(gameObject);
+        //if(gameObject.position.x <= -bounds) Destroy(gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D other)
