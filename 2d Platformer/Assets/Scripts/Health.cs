@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         currentHealth = maxHealth;
     }
 
@@ -23,10 +24,12 @@ public class Health : MonoBehaviour
     public void TakeDamage(int dmgAmount)
     {
         currentHealth -= dmgAmount;
+        Debug.Log("Player Health = " + currentHealth);
 
         if(currentHealth <= 0)
         {
-            Destroy(gameObject,deathDelay);
+            Debug.Log("You are dead! Game Over!");
+            Time.timeScale = 0;
         }
     }
 

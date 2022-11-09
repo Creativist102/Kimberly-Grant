@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 8509643605904498292}
   - component: {fileID: 8509643605904498283}
   - component: {fileID: 8509643605904498280}
+  - component: {fileID: -7803494503341075214}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -273,6 +274,18 @@ MonoBehaviour:
   firePoint: {fileID: 8509643605934315858}
   projectile: {fileID: 5655304191962016765, guid: 35d5267e0c22d5c43ba6f611640a967d, type: 3}
   bounds: 30
+--- !u!114 &-7803494503341075214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8509643605904498289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec936e10349d51409fd57e3ba8c7baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8509643605934315869
 GameObject:
   m_ObjectHideFlags: 0
