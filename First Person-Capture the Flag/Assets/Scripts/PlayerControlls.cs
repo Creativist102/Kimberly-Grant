@@ -10,8 +10,8 @@ public class PlayerControlls : MonoBehaviour
 
     [Header("Camera")]
     public float lookSensitivity;
-    public float MaxLookX;
-    public float MinLookX;
+    public float maxLookX;
+    public float minLookX;
     private float rotationX;
 
     private Camera camera;
@@ -46,13 +46,21 @@ public class PlayerControlls : MonoBehaviour
         float x = Input.GetAxis("Horizontal") * moveSpeed;
         float z = Input.GetAxis("Vertical") * moveSpeed;
         
-        rb.velocity = new Vector3(x, rb.velocity.y, z);
+        Vector3 dir = (transform.right * x) + (transform.forward * z);
+        dir.y = rb.velocity.y;
+
+        //rb.velocity = new Vector3(x, rb.velocity.y, z);
     }
 
     void CameraLook()
     {
         float y =  Input.GetAxis("Mouse X") * lookSensitivity;
         rotationX += Input.GetAxis("Mouse Y") * lookSensitivity;
+
+        rotationX = Mathf.Clamp(rotationX, minLookX, maxLookX);
+
+        camera.transform.localRotation = Quaternion.Euler(-rotationX,0,0);
+        transform.eulerAngles += Vector3.up * y;
     }
 
     void Jump()
