@@ -7,6 +7,8 @@ public class PlayerControlls : MonoBehaviour
     [Header("Player Movement")]
     public float moveSpeed;
     public float jumpForce;
+    private float currentHp;
+    private float maxHp = 10f;
 
     [Header("Camera")]
     public float lookSensitivity;
@@ -16,18 +18,38 @@ public class PlayerControlls : MonoBehaviour
 
     private Camera camera;
     private Rigidbody rb;
+    //private Weapon balloon;
 
 
     void Awake()
     {
-        camera = Camera.main;
-        rb = GetComponent<Rigidbody>();
+        //balloon = GetComponent<Weapon>();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        camera = Camera.main;
+        rb = GetComponent<Rigidbody>(); 
+    }
+
+    public void GiveAmmo(int ammoAmount)
+    {
+        Debug.Log("Player has collected balloons!");
+    }
+
+    public void GiveHealth(int healthAmount)
+    {
+        Debug.Log("Player has collected health!");
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        Debug.Log("Player has taken damage!");
+    }
+
+    public void Die()
+    {
+        Debug.Log("Player has died! Game over!");
     }
 
     void Update()
@@ -48,6 +70,7 @@ public class PlayerControlls : MonoBehaviour
         
         Vector3 dir = (transform.right * x) + (transform.forward * z);
         dir.y = rb.velocity.y;
+        rb.velocity = dir;
 
         //rb.velocity = new Vector3(x, rb.velocity.y, z);
     }
