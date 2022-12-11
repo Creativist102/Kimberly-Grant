@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngline.AI;
+using UnityEngine.AI;
 using System.Linq;
 
 public class Enemy : MonoBehaviour
@@ -12,21 +12,22 @@ public class Enemy : MonoBehaviour
 
     public float moveSpeed;
     public float attackRange;
-    public float PathOffset;
+    public float yPathOffset;
 
     private List<Vector3> path;
 
     //private Weapon weapon;
+
     private GameObject target;
 
     // Start is called before the first frame update
     void Start()
     {
         //weapon = GetComponent<Weapon>();
-        target = FindObjectOfType<PlayerController>().gameObject;
+        target = FindObjectOfType<PlayerControlls>().gameObject;
         InvokeRepeating("UpdatePath", 0f, 0.5f);
 
-        curHP = maxHP
+        curHP = maxHP;
     }
 
     // Update is called once per frame
@@ -46,7 +47,7 @@ public class Enemy : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, path[0] + new Vector3(0, yPathOffset, 0), moveSpeed * Time.deltaTime);
 
         if(transform.position == path[0] + new Vector3(0, yPathOffset, 0))
-            ...;
+            path.RemoveAt(0);
     }
 
     public void TakeDamage(int damage)
@@ -65,7 +66,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         Vector3 dir = (target.transform.position - transform.position).normalized;
-        float angle = mathf.Atan2(dir.x, dir.y) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(dir.x, dir.y) * Mathf.Rad2Deg;
         transform.eulerAngles = Vector3.up * angle;
 
         float dist = Vector3.Distance(transform.position, target.transform.position);

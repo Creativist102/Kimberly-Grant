@@ -11,7 +11,7 @@ public class HomeBase : MonoBehaviour
     void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
-        flagRender = GameObject.Find("Player Flag Base").GetComponent<Renderer>();
+        flagRender = GameObject.Find("Player Flag").GetComponent<Renderer>();
 
         flagRender.enabled = false;
     }

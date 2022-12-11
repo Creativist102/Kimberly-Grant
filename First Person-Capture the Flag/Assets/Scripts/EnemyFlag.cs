@@ -17,7 +17,10 @@ public class EnemyFlag : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        gm.hasFlag = true;
-        render.enabled = false;
+        if(other.CompareTag("Player"))
+        {
+            gm.hasFlag = true;
+            render.enabled = false;
+        }
     }
 }

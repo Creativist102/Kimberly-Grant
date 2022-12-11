@@ -4,32 +4,55 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Flag Stats")]
     public bool hasFlag;
     public bool flagPlaced;
 
+    public int scoreToWin;
+    public int curScore;
+
+    public bool gamePaused;
+
+
+    void Awake()
+    {
+        //Set instance to this script instance = this;
+    }
 
     void Start()
     {
         hasFlag = false;
         flagPlaced = false;
+
+        Time.timeScale = 1.0f;
     }
 
     void Update()
     {
         if(flagPlaced)
         {
-            WinGame();
+            Debug.Log("You have placed a flag!");
+            //AddScore();
         }
+
+        if(Input.GetButtonDown("Cancel"))
+            TogglePauseGame();
     }
 
-//Actions
+    public void TogglePauseGame()
+    {
+        gamePaused = ! gamePaused;
+        Time.timeScale = gamePaused == true ? 0.0f : 1.0f;
+
+        Cursor.lockState = gamePaused == true ? CursorLockMode.None : CursorLockMode.Locked;
+    }
+
     public void PlaceFlag()
     {
         flagPlaced = true;
-        hasFlag = false;
+        //hasFlag = false;
     }
 
-//Final Scene
     public void WinGame()
     {
         Debug.Log("You've won! Have a cookie!");
@@ -39,6 +62,5 @@ public class GameManager : MonoBehaviour
     public void LoseGame()
     {
         Debug.Log("You've misplaced your flag. Try again?");
-
     }
 }

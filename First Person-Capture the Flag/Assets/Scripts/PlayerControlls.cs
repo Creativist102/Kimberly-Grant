@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class PlayerControlls : MonoBehaviour
 {
+    [Header("Status")]
+    public float curHp;
+    public float maxHp;
+    public float curAmmo;
+    public float maxAmmo;
+
     [Header("Player Movement")]
     public float moveSpeed;
     public float jumpForce;
-    private float currentHp;
-    private float maxHp = 10f;
 
     [Header("Camera")]
     public float lookSensitivity;
@@ -18,38 +22,21 @@ public class PlayerControlls : MonoBehaviour
 
     private Camera camera;
     private Rigidbody rb;
+
     //private Weapon balloon;
 
 
     void Awake()
     {
+        curHp = maxHp;
+        camera = Camera.main;
+        rb = GetComponent<Rigidbody>(); 
         //balloon = GetComponent<Weapon>();
     }
 
     void Start()
     {
-        camera = Camera.main;
-        rb = GetComponent<Rigidbody>(); 
-    }
 
-    public void GiveAmmo(int ammoAmount)
-    {
-        Debug.Log("Player has collected balloons!");
-    }
-
-    public void GiveHealth(int healthAmount)
-    {
-        Debug.Log("Player has collected health!");
-    }
-
-    public void TakeDamage(int damageAmount)
-    {
-        Debug.Log("Player has taken damage!");
-    }
-
-    public void Die()
-    {
-        Debug.Log("Player has died! Game over!");
     }
 
     void Update()
@@ -57,22 +44,21 @@ public class PlayerControlls : MonoBehaviour
         Move();
         CameraLook();
 
-        if(Input.GetButtonDown("Jump"))
+        /*
+        if(input.GetButton("Fire1"))
         {
-            Jump();
+            if(weapon.CanShoot())
+            weapon.Shoot();
         }
-    }
+        */
 
-    void Move()
-    {
-        float x = Input.GetAxis("Horizontal") * moveSpeed;
-        float z = Input.GetAxis("Vertical") * moveSpeed;
+        if(Input.GetButtonDown("Jump"))
+            Jump();
         
-        Vector3 dir = (transform.right * x) + (transform.forward * z);
-        dir.y = rb.velocity.y;
-        rb.velocity = dir;
-
-        //rb.velocity = new Vector3(x, rb.velocity.y, z);
+        /*
+        if(GameManager.instance.gamePaused == true)
+            return;
+        */
     }
 
     void CameraLook()
@@ -86,6 +72,17 @@ public class PlayerControlls : MonoBehaviour
         transform.eulerAngles += Vector3.up * y;
     }
 
+    void Move()
+    {
+        float x = Input.GetAxis("Horizontal") * moveSpeed;
+        float z = Input.GetAxis("Vertical") * moveSpeed;
+        
+        Vector3 dir = (transform.right * x) + (transform.forward * z);
+
+        dir.y = rb.velocity.y;
+        rb.velocity = dir;
+    }
+
     void Jump()
     {
         Ray ray = new Ray(transform.position, Vector3.down);
@@ -94,5 +91,28 @@ public class PlayerControlls : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        curHp -= damageAmount;
+
+        if (curHp <= 0)
+            Expire();
+    }
+
+    public void Expire()
+    {
+        Debug.Log("Player has died! Game over!");
+    }
+
+    public void GiveHealth(int healthAmount)
+    {
+        Debug.Log("Player has collected health!");
+    }
+
+    public void GiveAmmo(int ammoAmount)
+    {
+        Debug.Log("Player has collected balloons!");
     }
 }
